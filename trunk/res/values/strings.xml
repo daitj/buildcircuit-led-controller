@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome">Welcome to this app</string>
+    <string name="app_name">Build Curcuit Led Controller</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="button_scan">Scan&#8230;</string>
+    <string name="title_other_devices">Unpaired Devices</string>
+    <string name="connect">Connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No deivice found</string>
+    <string name="scanning">Scanning</string>
+    <string name="no_bluetooth_adapter">No bluetooth adapter found</string>
+    <string name="select_device">Select a device to connect</string>
+    <string name="waiting_bluetooth">Waiting for the bluetooth to be ready</string>
+    <string name="refresh">Refresh List</string>
+    <string name="device_connected">Device Connected</string>
+    <string name="send_data">Send Data</string>
+    <string name="brightness">Brightness:&#160;</string>
+</resources>
