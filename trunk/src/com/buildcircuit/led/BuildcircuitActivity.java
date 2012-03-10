@@ -1,5 +1,6 @@
 package com.buildcircuit.led;
 
+import java.io.IOException;
 import java.util.Set;
 
 import android.app.Activity;
@@ -147,6 +148,11 @@ public class BuildcircuitActivity extends Activity{
 				}
 				if(pd.isShowing()){
 					pd.dismiss();
+				}
+				try {
+					DeviceController.mSocket.close();
+				} catch (IOException e) {
+					alertDialog("Cannot close the connection");
 				}
 				break;
 			default:
