@@ -40,7 +40,7 @@ public class DeviceController extends Activity{
 	    final SeekBar seekbar = (SeekBar) findViewById(R.id.seekBar);
 	    seekbar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-				String seekValue = ""+(int)(seekbar.getProgress()*0.9);
+				String seekValue = ""+(int)(seekbar.getProgress()*0.09);
         		String data= seekValue;
             	byte[] buffer = null;
             	try {
