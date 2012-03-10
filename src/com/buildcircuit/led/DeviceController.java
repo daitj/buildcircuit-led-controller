@@ -21,7 +21,7 @@ public class DeviceController extends Activity{
 	private String CURRENT_DEVICE = null;
 	private BluetoothDevice device = null;
 	private static UUID SerialPortServiceClass_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
-	private static BluetoothSocket mSocket = null;
+	public static BluetoothSocket mSocket = null;
 	//private static InputStream socketIn = null;
 	private static OutputStream socketOut = null;
     public Intent intent = new Intent();
@@ -31,6 +31,7 @@ public class DeviceController extends Activity{
 		mAdapter = BluetoothAdapter.getDefaultAdapter();
 		Bundle extras = getIntent().getExtras();
 		CURRENT_DEVICE = extras.getString("device");
+		intent.putExtra("connected_device", CURRENT_DEVICE);
 		device = mAdapter.getRemoteDevice(CURRENT_DEVICE);
 		super.onCreate(savedInstanceState);
 	    setContentView(R.layout.control);
@@ -39,7 +40,7 @@ public class DeviceController extends Activity{
 	    final SeekBar seekbar = (SeekBar) findViewById(R.id.seekBar);
 	    seekbar.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
 			public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-				String seekValue = ""+(int)(seekbar.getProgress()*0.09);
+				String seekValue = ""+(int)(seekbar.getProgress()*0.9);
         		String data= seekValue;
             	byte[] buffer = null;
             	try {
